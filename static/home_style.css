@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.register_button {
+    display: center;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 30px;
+    padding: 10px;
+    border-width: 1px
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+.burger-menu {
+    cursor: pointer;
+}
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+.welcome-message {
+    font-size: 1.5em;
+}
+.home_catalog {
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.hometext {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 2px solid;
+    border-color: green;
+}
+
+.home_catalog h3 {
+    text-align: center;
+}
+
+.hidden-margin {
+    margin-top: 50px;
+}
+.hidden-margin2 {
+    margin-top: 0px;
+}
+
+.company_text{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.card-body {
+    border: 1px solid;
+    border-color: green;
+}
+
+.catalog_text_container{
+ padding: 25px;
+    display: center;
+    gap: 0;
+    width: 30%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 2px solid;
+    border-color: green;
+}
+.catalog_text {
+    text-align: center;
+
+}
+
+.card-group {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
+  gap: 30px; /* Промежуток между карточками */
+}
+
+
+
+.card-title {
+    text-align: center;
+
+}
+    /* Responsive design */
+    @media (max-width: 768px) {
+    .catalog {
+    width: 90%;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Userpage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='logout_style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- навбар начало -->
+<nav class="navbar navbar-expand-xxl navbar bg-white border-bottom border-body" data-bs-theme="white">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home?username={{username}}">Mik✧Med</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li>
+            {% if is_logged == 'True'%}
+                <a class="nav-link active" href="/home/logout">{{ username }}</a>
+              {% else %}
+                <a class="nav-link " href="/home/registration">Регистрация/Вход</a>
+              {% endif %}
+          </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/home/catalog">Каталог</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home/about">О компании</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- навбар конец -->
+
+<div class="container">
+    <div class="text-center">
+        <h4>Данные пользователя {{ username }}</h4>
+        <p>Почта - {{ email }}</p>
+        <p>Номер телефона - {{ phone_number }}</p>
+        <p>Пароль - {{ password }}</p>
+
+        <form action="/home/logout/logout_button_clicked" method="POST">
+            <button type="submit">Выйти с аккаунта</button>
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>

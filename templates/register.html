@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register_style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+<!-- навбар начало -->
+<nav class="navbar navbar-expand-xxl navbar bg-white border-bottom border-body" data-bs-theme="white">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home?username={{username}}">Mik✧Med</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li>
+                <a class="nav-link active" href="/home/registration">Регистрация/Вход</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/home/catalog">Каталог</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home/about">О компании</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- навбар конец -->
+    <img src="/static/images/MikhMedLogo.jpg", width="200", height="200", class="logo" >
+
+<div class="register_container">
+
+    <h2 align="center" class="register_text">Регистрация</h2>
+    <div class="container">
+        <form method="POST" action="{{ url_for('register') }}">
+
+            <div class="group">
+              <input type="email" id="email" name="email" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Введите почту</label>
+            </div>
+
+            <div class="group">
+              <input type="number" id="phone_number" name="phone_number" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Введите свой номер телефона</label>
+            </div>
+
+            <div class="group">
+              <input type="text" id="username" name="username" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Имя пользователя</label>
+            </div>
+
+            <div class="group">
+              <input type="password" id="password" name="password" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Придумайте пароль</label>
+            </div>
+
+            <a class="login" href="/home/login">Войти в систему</a>
+
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+
+            <div class="centered-container">
+                <button type="submit">Зарегистрироваться</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

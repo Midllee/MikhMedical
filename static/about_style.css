@@ -1,0 +1,39 @@
+.company-history {
+    text-align: justify; /* Центрирование текста */
+    max-width: 1000px; /* Максимальная ширина */
+    width: 90%; /* Уменьшенная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+
+    font-family: Arial, sans-serif; /* Шрифт */
+    line-height: 1.6; /* Межстрочный интервал */
+    padding: 20px; /* Внутренние отступы */
+}
+
+.company-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 3px solid;
+    border-color: green;
+}
+
+.company-history h2 {
+    font-size: 2em; /* Размер шрифта заголовка */
+    color: #333; /* Цвет заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.company-history h3 {
+    font-size: 1.5em; /* Размер шрифта подзаголовка */
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.company-history p {
+    font-size: 1.2em; /* Размер шрифта текста */
+    color: #555; /* Цвет текста */
+    margin-bottom: 15px; /* Отступ снизу */
+}
