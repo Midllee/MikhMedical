@@ -35,12 +35,12 @@ body {
     gap: 0;
     text-align: center;
     font-family: arial;
-    border-radius: 8px; /* Скругленные углы */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), /* Нижняя тень */
-              0 6px 20px rgba(0, 0, 0, 0.1); /* Более размытая тень */
-  padding: 16px; /* Внутренние отступы */
-  margin: 16px; /* Внешние отступы */
-  transition: box-shadow 0.3s ease; /* Плавный переход тени */
+    border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+              0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px;
+  transition: box-shadow 0.3s ease;
 
 }
 

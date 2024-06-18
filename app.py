@@ -59,30 +59,32 @@ def logout_button_clicked():
 @app.route('/home/catalog/submit', methods=['POST'])
 def submit():
     product_id = request.form.get('product_id')
+    delivery_time = request.form.get('delivery_time')
+    address = request.form.get('address')
     return redirect(url_for('product_page', product_id=product_id))
 
 
 @app.route('/home/catalog/deliver_submit', methods=['POST'])
 def deliver_submit():
     product_id = request.form.get('product_id')
-    make_response().set_cookie('delivery_time')
-    deliver_time = request.cookies.get('delivery_time')
     username = request.cookies.get('username')
-    return redirect(url_for('delivery_page', product_id=product_id, deliver_time=deliver_time, username=username))
+    return redirect(url_for('delivery_page', product_id=product_id, username=username))
 
 
-@app.route('/home/delivery')
-def delivery_page():
+@app.route('/home/delivery/<int:product_id>')
+def delivery_page(product_id):
     username = request.cookies.get('username')
-    delivery_time = request.cookies.get('delivery_time')
-    product_id = request.form.get('product_id')
-
-    return render_template('delivery_page.html', product_id=product_id, all_products=all_products, username=username, delivery_time=delivery_time)
+    logged = request.cookies.get('logged')
+    return render_template('delivery_page.html', product_id=product_id, all_products=all_products, username=username, is_logged=logged)
 
 
 @app.route('/home/catalog/product/<int:product_id>')
 def product_page(product_id):
-    return render_template('product_page.html', product_id=product_id, all_products=all_products)
+    logged = request.cookies.get('logged')
+    username = request.cookies.get('username')
+
+
+    return render_template('product_page.html', product_id=product_id, all_products=all_products, is_logged=logged, username=username)
     # return f'Product ID: {product_id}'
 
 

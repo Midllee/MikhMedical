@@ -1,27 +1,31 @@
-.container {
+.catalog_container {
     padding: 25px;
-    display: center;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     gap: 0;
+    width: 50%;
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border: 2px solid;
     border-color: green;
 }
-
-.text-center {
-    text-align: center;
+body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
+.container 		{
+text-align: center;
+  font-family:'Arial';
+  width: 800px;
+  margin:15px auto 0;
+  display:block;
+  background:#FFF;
+  padding:10px 50px 5px;
 }
 
-body h4 {
-    margin-bottom: 30px;
-}
+.home {
 
-.button_confirm {
   display: block;
   width: 40%;
-  margin: -5px auto;
+  margin: auto;
   border-radius: 10px;
   border: none;
   background-color: green;

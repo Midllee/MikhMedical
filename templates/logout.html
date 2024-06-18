@@ -38,13 +38,14 @@
 
 <div class="container">
     <div class="text-center">
-        <h4>Данные пользователя {{ username }}</h4>
+        <img src="/static/images/free-icon-avatar-9176733.png" alt="" width="15%">
+        <h4>{{ username }}</h4>
         <p>Почта - {{ email }}</p>
         <p>Номер телефона - {{ phone_number }}</p>
         <p>Пароль - {{ password }}</p>
 
         <form action="/home/logout/logout_button_clicked" method="POST">
-            <button type="submit">Выйти с аккаунта</button>
+            <button type="submit" class="button_confirm">Выйти с аккаунта</button>
         </form>
 
     </div>

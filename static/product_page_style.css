@@ -3,6 +3,23 @@ body {
     background-color: #fff;
 }
 
+.col {
+    box-shadow: 4px 2px 3px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    font-family: arial;
+    border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+              0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 5px;
+  transition: box-shadow 0.3s ease;
+
+}
+
 
 .catalog_container {
     padding: 25px;
@@ -30,7 +47,9 @@ text-align: center;
 .confirm_button{
 
   display: block;
-  width: 100%;
+  width: 40%;
+  margin: -20px auto;
+  border-radius: 10px;
   border: none;
   background-color: green;
   color: white;
@@ -47,6 +66,7 @@ text-align: center;
   position:relative;
   margin:auto;
   margin-bottom:45px;
+  margin-top: 10px;
 }
 
 input 				{
